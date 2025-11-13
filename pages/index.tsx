@@ -92,11 +92,14 @@ export default function Home() {
           <p className={`max-w-xl mx-auto text-lg sm:text-xl ${isDark ? 'text-white/80' : 'text-gray-700'} mb-10 animate-fadein delay-150 transition-colors duration-500`}>
             Willkommen bei Saray – Ihrem Lieblingslokal in der Altstadt. Genießen Sie orientalische Spezialitäten, italienische Klassiker und köstliche Pizza – stilvoll serviert und immer frisch zubereitet.
           </p>
-          <Link href="/menu">
-            <span className="inline-block px-8 py-3 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 animate-fadein delay-300 btn-glow-red btn-gradient-animate cursor-pointer">
-              Speisekarte ansehen
-            </span>
-          </Link>
+          <a 
+            href="/speisekarte.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 animate-fadein delay-300 btn-glow-red btn-gradient-animate cursor-pointer"
+          >
+            Speisekarte ansehen
+          </a>
 
           {/* Phone Number */}
           <div className="mt-16 animate-fadein delay-450">
