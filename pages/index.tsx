@@ -1,12 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-
-const NAV_LINKS = [
-  { name: "Home", href: "#" },
-  { name: "Menü", href: "#menu" },
-  { name: "Über uns", href: "#about" },
-  { name: "Kontakt", href: "#contact" },
-];
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -351,7 +343,7 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Ich liebeeee die Pizza und auch die Döner Sauce die angeboten wird! Jedesmal eine erneute Geschmacksexplosion, wir essen super gerne bek Saray Kumar unteranderem tolles Preis-Leistungs-Verhältnis 🔥"
+                &ldquo;Ich liebeeee die Pizza und auch die Döner Sauce die angeboten wird! Jedesmal eine erneute Geschmacksexplosion, wir essen super gerne bek Saray Kumar unteranderem tolles Preis-Leistungs-Verhältnis 🔥&rdquo;
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
                 — Aylin K.
@@ -368,7 +360,7 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Seit mehr als 8 Jahren einer meiner Lieblingsdöner in Saarlouis! Egal ob Pizza, Nudeln, Döner ect. alles sehr schmackhaft!"
+                &ldquo;Seit mehr als 8 Jahren einer meiner Lieblingsdöner in Saarlouis! Egal ob Pizza, Nudeln, Döner ect. alles sehr schmackhaft!&rdquo;
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
                 — DvKa
@@ -385,7 +377,7 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Beste Rigatoni Rot-Weiß 👌👌👌 Nette Leute, 1a Service - gibt immer Dönersoße und scharfe Soße on top :) dankeeee"
+                &ldquo;Beste Rigatoni Rot-Weiß 👌👌👌 Nette Leute, 1a Service - gibt immer Dönersoße und scharfe Soße on top :) dankeeee&rdquo;
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
                 — Lisa (Liz fawn)
