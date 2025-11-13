@@ -21,7 +21,6 @@ export default function Home() {
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 z-0"
-        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
       >
         <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-72 ${isDark ? 'bg-gradient-to-tr from-white/10 via-white/0 to-white/0' : 'bg-gradient-to-tr from-red-500/20 via-red-300/5 to-red-100/0'} rounded-full blur-3xl opacity-40 transition-colors duration-500`} />
         <div className={`absolute bottom-0 right-0 w-1/3 h-40 ${isDark ? 'bg-gradient-to-tl from-white/5 via-white/0 to-white/0' : 'bg-gradient-to-tl from-red-400/15 via-red-200/5 to-red-50/0'} rounded-full blur-2xl opacity-30 transition-colors duration-500`} />
@@ -74,7 +73,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="flex-1 flex flex-col items-center justify-center text-center relative z-10 px-4">
-        <section className="pt-36 pb-24" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
+        <section className="pt-36 pb-24">
           <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold ${isDark ? 'text-white' : 'text-gray-900'} drop-shadow-md tracking-tight mb-6 animate-fadein transition-colors duration-500`}>
             Saray bei Kumar
             <span className="block text-transparent bg-clip-text gradient-shine-metal glow-hover">
