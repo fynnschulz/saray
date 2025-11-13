@@ -380,7 +380,7 @@ export default function Home() {
                 &ldquo;Beste Rigatoni Rot-Weiß 👌👌👌 Nette Leute, 1a Service - gibt immer Dönersoße und scharfe Soße on top :) dankeeee&rdquo;
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
-                — Lisa (Liz fawn)
+                — Lisa
               </p>
             </div>
           </div>
