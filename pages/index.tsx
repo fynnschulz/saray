@@ -23,10 +23,10 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: 'url(/background.png)',
-            opacity: isDark ? '0.15' : '0.08'
+            opacity: isDark ? '0.35' : '0.25'
           }}
         />
-        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-b from-black/80 via-black/60 to-black/80' : 'bg-gradient-to-b from-white/85 via-white/70 to-white/85'} transition-colors duration-500`} />
+        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-b from-black/60 via-black/40 to-black/60' : 'bg-gradient-to-b from-white/75 via-white/60 to-white/75'} transition-colors duration-500`} />
         {/* Glow Aura Effect */}
         <div className="absolute inset-0 bg-gradient-radial from-[#ff4d4d]/10 via-transparent to-transparent blur-3xl" />
       </div>
