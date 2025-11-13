@@ -17,6 +17,20 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen flex flex-col ${bgClass} relative overflow-x-hidden font-sans transition-colors duration-500`}>
+      {/* Background Image with Aura Effect */}
+      <div className="fixed inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(/background.png)',
+            opacity: isDark ? '0.15' : '0.08'
+          }}
+        />
+        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-b from-black/80 via-black/60 to-black/80' : 'bg-gradient-to-b from-white/85 via-white/70 to-white/85'} transition-colors duration-500`} />
+        {/* Glow Aura Effect */}
+        <div className="absolute inset-0 bg-gradient-radial from-[#ff4d4d]/10 via-transparent to-transparent blur-3xl" />
+      </div>
+
       {/* Decorative gradients and shine */}
       <div
         aria-hidden="true"
