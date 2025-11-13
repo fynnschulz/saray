@@ -341,7 +341,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Review 1 */}
+            {/* Review 1 - Aylin */}
             <div className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-gray-100 border-gray-200'} backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-xl`}>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -351,14 +351,14 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Beste Pizza in Saarlouis! Immer frisch und der Service ist super freundlich. Absolute Empfehlung!"
+                "Ich liebeeee die Pizza und auch die Döner Sauce die angeboten wird! Jedesmal eine erneute Geschmacksexplosion, wir essen super gerne bek Saray Kumar unteranderem tolles Preis-Leistungs-Verhältnis 🔥"
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
-                — Anna M.
+                — Aylin K.
               </p>
             </div>
 
-            {/* Review 2 */}
+            {/* Review 2 - DvKa */}
             <div className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-gray-100 border-gray-200'} backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-xl`}>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -368,14 +368,14 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Hervorragende Qualität und große Portionen. Das Döner ist fantastisch! Komme immer wieder gerne."
+                "Seit mehr als 8 Jahren einer meiner Lieblingsdöner in Saarlouis! Egal ob Pizza, Nudeln, Döner ect. alles sehr schmackhaft!"
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
-                — Michael K.
+                — DvKa
               </p>
             </div>
 
-            {/* Review 3 */}
+            {/* Review 3 - Lisa */}
             <div className={`${isDark ? 'bg-white/5 border-white/10' : 'bg-gray-100 border-gray-200'} backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-xl`}>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -385,10 +385,10 @@ export default function Home() {
                 ))}
               </div>
               <p className={`${isDark ? 'text-white/90' : 'text-gray-700'} mb-4 italic transition-colors duration-200`}>
-                "Gemütliches Ambiente und leckeres Essen. Die Pasta ist hausgemacht und schmeckt einfach köstlich!"
+                "Beste Rigatoni Rot-Weiß 👌👌👌 Nette Leute, 1a Service - gibt immer Dönersoße und scharfe Soße on top :) dankeeee"
               </p>
               <p className={`${isDark ? 'text-white/60' : 'text-gray-500'} text-sm font-semibold transition-colors duration-200`}>
-                — Sarah L.
+                — Lisa (Liz fawn)
               </p>
             </div>
           </div>
