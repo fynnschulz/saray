@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
   const year = new Date().getFullYear();
+  const [flippedCards, setFlippedCards] = useState<{[key: string]: boolean}>({});
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-[#18181b] to-[#23272f] relative overflow-x-hidden font-sans">
@@ -11,7 +12,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: 'url(/background.png)',
-            opacity: '0.35'
+            opacity: '0.40'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
@@ -168,65 +169,183 @@ export default function Home() {
             Unsere <span className="text-transparent bg-clip-text gradient-shine-metal">Spezialitäten</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            {/* Kebab Card */}
+            <div 
+              className="flip-card cursor-pointer h-[500px]"
+              onClick={() => setFlippedCards(prev => ({...prev, kebab: !prev.kebab}))}
+            >
+              <div className={`flip-card-inner ${flippedCards.kebab ? 'flipped' : ''}`}>
+                {/* Front */}
+                <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
+                  <div className="h-[340px] overflow-hidden">
+                    <img 
+                      src="/kebab.png" 
+                      alt="Kebab & Co" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
+                      Kebab & Co
+                    </h3>
+                    <p className="text-white/70 text-sm transition-colors duration-200">
+                      Orientalische Spezialitäten
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                {/* Back */}
+                <div className="flip-card-back rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-6 overflow-y-auto">
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Kebab & Co</h3>
+                  <ul className="text-white/90 space-y-2 text-xs leading-relaxed">
+                    <li><strong>Hähnchen Kebab</strong><br/>Hähnchenfleisch, Salat, Sauce</li>
+                    <li><strong>Veggi Kebab</strong><br/>Vegetarische Variante</li>
+                    <li><strong>Kebab Teller</strong><br/>Hähnchenfleisch, Salat, Pommes oder Reis</li>
+                    <li><strong>Dürüm</strong><br/>Hähnchenfleisch, Salat, Sauce</li>
+                    <li><strong>Lahmacun mit Hähnchenfleisch</strong><br/>Hähnchenfleisch, Salat, Sauce</li>
+                    <li><strong>Lahmacun</strong><br/>Salat, Sauce</li>
+                    <li><strong>Kebab Box</strong><br/>Hähnchenfleisch, Pommes, Sauce</li>
+                    <li><strong>Chicken Nuggets</strong><br/>6 Stück mit Sauce</li>
+                    <li><strong>Chicken Wings</strong><br/>5 Hähnchenflügel mit Sauce</li>
+                    <li><strong>Portion Pommes</strong></li>
+                    <li><strong>Portion Twister</strong></li>
+                    <li><strong>Extra Weichkäse</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* Pizza Card */}
-            <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-red-500/20">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/pizza.png" 
-                  alt="Italienische Pizza" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            <div 
+              className="flip-card cursor-pointer h-[500px]"
+              onClick={() => setFlippedCards(prev => ({...prev, pizza: !prev.pizza}))}
+            >
+              <div className={`flip-card-inner ${flippedCards.pizza ? 'flipped' : ''}`}>
+                {/* Front */}
+                <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
+                  <div className="h-[340px] overflow-hidden">
+                    <img 
+                      src="/pizza.png" 
+                      alt="Italienische Pizza" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
+                      Leckere Pizza
+                    </h3>
+                    <p className="text-white/70 text-sm transition-colors duration-200">
+                      Frisch gebacken mit besten Zutaten
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                {/* Back */}
+                <div className="flip-card-back rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-6 overflow-y-auto">
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Unsere Pizzen</h3>
+                  <ul className="text-white/90 space-y-2 text-xs leading-relaxed">
+                    <li><strong>Margherita</strong><br/>Tomatensauce & Käse</li>
+                    <li><strong>Salami</strong><br/>Tomatensauce, Käse & Salami</li>
+                    <li><strong>Vegetarisch</strong><br/>Tomatensauce, Käse, Champignon, Paprika, Peperoni & Oliven</li>
+                    <li><strong>Prosciutto</strong><br/>Tomatensauce, Käse & Schinken</li>
+                    <li><strong>Tonno</strong><br/>Tomatensauce, Käse, Thunfisch & Zwiebeln</li>
+                    <li><strong>Sucuk</strong><br/>Tomatensauce, Käse & Sucuk</li>
+                    <li><strong>Diavolo</strong><br/>Tomatensauce, Käse, Peperoniwurst, Peperoni & Zwiebeln</li>
+                    <li><strong>Sofia</strong><br/>Tomatensauce, Käse, Salami, Champignon & Spiegelei</li>
+                    <li><strong>Hawai</strong><br/>Tomatensauce, Käse, Schinken & Ananas</li>
+                    <li><strong>Kebab</strong><br/>Tomatensauce, Käse & Kebapfleisch</li>
+                    <li><strong>Capricciosa</strong><br/>Tomatensauce, Käse, Champignons, Schinken & gekochtes Ei</li>
+                    <li><strong>Chicken-BBQ</strong><br/>BBQ-Sauce, Käse, Mais, Hähnchenstreifen & Zwiebeln</li>
+                  </ul>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
-                  Leckere Pizza
-                </h3>
-                <p className="text-white/70 text-sm transition-colors duration-200">
-                  Frisch gebacken mit besten Zutaten
-                </p>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
             {/* Pasta Card */}
-            <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-red-500/20">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/pasta.png" 
-                  alt="Hausgemachte Pasta" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            <div 
+              className="flip-card cursor-pointer h-[500px]"
+              onClick={() => setFlippedCards(prev => ({...prev, pasta: !prev.pasta}))}
+            >
+              <div className={`flip-card-inner ${flippedCards.pasta ? 'flipped' : ''}`}>
+                {/* Front */}
+                <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
+                  <div className="h-[340px] overflow-hidden">
+                    <img 
+                      src="/pasta.png" 
+                      alt="Hausgemachte Pasta" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
+                      Herzhafte Pasta
+                    </h3>
+                    <p className="text-white/70 text-sm transition-colors duration-200">
+                      Traditionelle Rezepte
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                {/* Back */}
+                <div className="flip-card-back rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-6 overflow-y-auto">
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Unsere Pasta</h3>
+                  <p className="text-white/70 text-xs mb-3 italic text-center">alle überbacken mit Tomatensauce & Käse</p>
+                  <ul className="text-white/90 space-y-2 text-xs leading-relaxed">
+                    <li><strong>Rigatoni</strong><br/>Tomatensauce & Käse überbacken</li>
+                    <li><strong>Spaghetti</strong><br/>Tomatensauce & Käse überbacken</li>
+                    <li><strong>Tortellini</strong><br/>Tomatensauce & Käse überbacken</li>
+                    <li><strong>Combinazione</strong><br/>Rigatoni, Spaghetti & Tortellini mit Tomatensauce & Käse</li>
+                  </ul>
+                  <div className="mt-4 pt-3 border-t border-white/20">
+                    <p className="text-white font-semibold text-xs mb-2">Pasta-Extras:</p>
+                    <ul className="text-white/80 space-y-1 text-xs">
+                      <li>• Sahnesauce +0,50 €</li>
+                      <li>• Bolognese +0,50 €</li>
+                      <li>• Rot/Weiß-Sauce +0,50 €</li>
+                      <li>• Extra Kebapfleisch: klein +0,50 € / mittel +1,00 € / groß +1,50 €</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
-                  Herzhafte Pasta
-                </h3>
-                <p className="text-white/70 text-sm transition-colors duration-200">
-                  Traditionelle Rezepte
-                </p>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            {/* Döner/Salad Card */}
-            <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-red-500/20">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/salad.png?v=2" 
-                  alt="Frische Salate" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            {/* Salad Card */}
+            <div 
+              className="flip-card cursor-pointer h-[500px]"
+              onClick={() => setFlippedCards(prev => ({...prev, salad: !prev.salad}))}
+            >
+              <div className={`flip-card-inner ${flippedCards.salad ? 'flipped' : ''}`}>
+                {/* Front */}
+                <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
+                  <div className="h-[340px] overflow-hidden">
+                    <img 
+                      src="/salad.png?v=2" 
+                      alt="Frische Salate" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
+                      Genussvoller Salat
+                    </h3>
+                    <p className="text-white/70 text-sm transition-colors duration-200">
+                      Frische Köstlichkeiten
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                {/* Back */}
+                <div className="flip-card-back rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-6 overflow-y-auto">
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Unsere Salate</h3>
+                  <ul className="text-white/90 space-y-3 text-xs leading-relaxed">
+                    <li><strong>Gemischter Salat</strong><br/>Tomaten, Gurken, Weißkraut & Oliven</li>
+                    <li><strong>Thunfisch Salat</strong><br/>Thunfisch, Zwiebeln & Oliven</li>
+                    <li><strong>Bauern Salat</strong><br/>Mais, Weichkäse & Peperoni</li>
+                    <li><strong>Chicken Salat</strong><br/>frisch gebratenes Hähnchenfleisch</li>
+                  </ul>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff4d4d] transition-colors duration-200">
-                  Genussvoller Salat
-                </h3>
-                <p className="text-white/70 text-sm transition-colors duration-200">
-                  Frische Köstlichkeiten & mehr
-                </p>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
         </section>
@@ -493,6 +612,32 @@ export default function Home() {
         video::-moz-media-controls-volume-slider,
         video::-moz-media-controls-mute-button {
           display: none !important;
+        }
+
+        /* Flip Card Styles */
+        .flip-card {
+          perspective: 1000px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+        .flip-card-inner.flipped {
+          transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
         }
       `}</style>
     </div>
