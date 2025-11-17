@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -537,12 +538,12 @@ export default function Home() {
       <footer className="w-full border-white/10 bg-black/70 border-t py-6 mt-auto z-10 relative">
         <div className="max-w-5xl mx-auto px-6 text-center text-white/60 text-sm">
           <div className="flex justify-center gap-6 mb-2">
-            <a href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
+            <Link href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
               Impressum
-            </a>
-            <a href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
+            </Link>
+            <Link href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
               Datenschutz
-            </a>
+            </Link>
           </div>
           © {year} Saray – Döner, Pizza & Pasta
         </div>

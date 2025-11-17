@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Datenschutz() {
   const year = new Date().getFullYear();
@@ -22,9 +23,9 @@ export default function Datenschutz() {
       <header className="fixed top-0 left-0 w-full z-20 backdrop-blur-md bg-black/60 border-white/10 border-b">
         <nav className="flex items-center justify-between px-12 py-4">
           <div className="flex items-center ml-[-10px]">
-            <a href="/">
+            <Link href="/">
               <img src="/saray.png" alt="Saray Logo" className="h-20 w-auto logo-hover" />
-            </a>
+            </Link>
           </div>
           <div className="flex gap-6 mr-10 items-center">
             <a
@@ -72,7 +73,7 @@ export default function Datenschutz() {
                   <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong>
                 </p>
                 <p className="mb-4">
-                  Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+                  Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt &bdquo;Hinweis zur verantwortlichen Stelle&ldquo; in dieser Datenschutzerklärung entnehmen.
                 </p>
                 
                 <p className="mb-3">
@@ -214,7 +215,7 @@ export default function Datenschutz() {
 
                 <h3 className="text-xl font-semibold text-white mb-3 mt-6">SSL- bzw. TLS-Verschlüsselung</h3>
                 <p>
-                  Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                  Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
                 </p>
                 <p className="mt-3">
                   Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
@@ -227,7 +228,7 @@ export default function Datenschutz() {
                 
                 <h3 className="text-xl font-semibold text-white mb-3">Cookies</h3>
                 <p className="mb-3">
-                  Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
+                  Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
                 </p>
                 <p className="mb-3">
                   Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
@@ -293,7 +294,7 @@ export default function Datenschutz() {
                 
                 <h3 className="text-xl font-semibold text-white mb-3">Google Maps</h3>
                 <p className="mb-3">
-                  Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
+                  Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland.
                 </p>
                 <p className="mb-3">
                   Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung. Wenn Google Maps aktiviert ist, kann Google zum Zwecke der einheitlichen Darstellung der Schriftarten Google Fonts verwenden. Beim Aufruf von Google Maps lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
@@ -375,12 +376,12 @@ export default function Datenschutz() {
 
             {/* Back Button */}
             <div className="mt-12 text-center">
-              <a 
+              <Link 
                 href="/"
                 className="inline-block px-8 py-3 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 btn-glow-red btn-gradient-animate cursor-pointer"
               >
                 Zurück zur Startseite
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -390,12 +391,12 @@ export default function Datenschutz() {
       <footer className="w-full border-white/10 bg-black/70 border-t py-6 mt-auto z-10 relative">
         <div className="max-w-5xl mx-auto px-6 text-center text-white/60 text-sm">
           <div className="flex justify-center gap-6 mb-2">
-            <a href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
+            <Link href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
               Impressum
-            </a>
-            <a href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
+            </Link>
+            <Link href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
               Datenschutz
-            </a>
+            </Link>
           </div>
           © {year} Saray – Döner, Pizza & Pasta
         </div>

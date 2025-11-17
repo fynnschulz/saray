@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Impressum() {
   const year = new Date().getFullYear();
@@ -22,9 +23,9 @@ export default function Impressum() {
       <header className="fixed top-0 left-0 w-full z-20 backdrop-blur-md bg-black/60 border-white/10 border-b">
         <nav className="flex items-center justify-between px-12 py-4">
           <div className="flex items-center ml-[-10px]">
-            <a href="/">
+            <Link href="/">
               <img src="/saray.png" alt="Saray Logo" className="h-20 w-auto logo-hover" />
-            </a>
+            </Link>
           </div>
           <div className="flex gap-6 mr-10 items-center">
             <a
@@ -164,12 +165,12 @@ export default function Impressum() {
 
             {/* Back Button */}
             <div className="mt-12 text-center">
-              <a 
+              <Link 
                 href="/"
                 className="inline-block px-8 py-3 rounded-full text-black font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200 btn-glow-red btn-gradient-animate cursor-pointer"
               >
                 Zurück zur Startseite
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -179,12 +180,12 @@ export default function Impressum() {
       <footer className="w-full border-white/10 bg-black/70 border-t py-6 mt-auto z-10 relative">
         <div className="max-w-5xl mx-auto px-6 text-center text-white/60 text-sm">
           <div className="flex justify-center gap-6 mb-2">
-            <a href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
+            <Link href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
               Impressum
-            </a>
-            <a href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
+            </Link>
+            <Link href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
               Datenschutz
-            </a>
+            </Link>
           </div>
           © {year} Saray – Döner, Pizza & Pasta
         </div>
