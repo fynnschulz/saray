@@ -12,7 +12,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: 'url(/background.png)',
-            opacity: '0.40'
+            opacity: '0.58'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
@@ -46,7 +46,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="mailto:info@saray.de"
+              href="mailto:sarayimbiss.kumar@gmail.com"
               className="text-white hover:text-[#ff4d4d] transition-colors duration-200"
               aria-label="E-Mail"
             >
@@ -133,27 +133,27 @@ export default function Home() {
             <div className="max-w-2xl mx-auto space-y-3">
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Montag</span>
-                <span className="font-mono text-lg">11:00–23:00</span>
+                <span className="font-mono text-lg">11:00–23:30</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Dienstag</span>
-                <span className="font-mono text-lg">11:00–23:00</span>
+                <span className="font-mono text-lg">11:00–23:30</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Mittwoch</span>
-                <span className="font-mono text-lg">11:00–23:00</span>
+                <span className="font-mono text-lg">11:00–23:30</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Donnerstag</span>
-                <span className="font-mono text-lg">11:00–23:00</span>
+                <span className="font-mono text-lg">11:00–23:30</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Freitag</span>
-                <span className="font-mono text-lg">11:00–01:00</span>
+                <span className="font-mono text-lg">11:00–02:00</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200">
                 <span className="font-semibold text-lg">Samstag</span>
-                <span className="font-mono text-lg">11:00–01:00</span>
+                <span className="font-mono text-lg">11:00–02:00</span>
               </div>
               <div className="flex justify-between items-center text-white/90 hover:text-[#ff4d4d] transition-colors duration-200 border-white/20 border-t pt-3 mt-3">
                 <span className="font-semibold text-lg">Sonntag</span>
@@ -413,11 +413,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Closing Message */}
-        <section className="w-full max-w-7xl mx-auto px-6 pb-20">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center animate-fadein">
-            Wir freuen uns auf Ihren Besuch!
-          </p>
+        {/* Unser Team Section */}
+        <section className="w-full max-w-7xl mx-auto px-6 py-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-16 animate-fadein">
+            Unser <span className="text-transparent bg-clip-text gradient-shine-metal">Team</span>
+          </h2>
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+              <div className="overflow-hidden">
+                <img 
+                  src="/team.jpeg" 
+                  alt="Unser Team - Saray bei Kumar" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="text-center p-4">
+                <p className="text-sm text-white/60">
+                  Geleitet von Veluppillai Ratnakumar
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Google Reviews Section */}
@@ -507,11 +524,26 @@ export default function Home() {
             </a>
           </div>
         </section>
+
+        {/* Closing Message */}
+        <section className="w-full max-w-7xl mx-auto px-6 pb-20">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center animate-fadein">
+            Wir freuen uns auf Ihren Besuch!
+          </p>
+        </section>
       </main>
 
       {/* Footer */}
       <footer className="w-full border-white/10 bg-black/70 border-t py-6 mt-auto z-10 relative">
         <div className="max-w-5xl mx-auto px-6 text-center text-white/60 text-sm">
+          <div className="flex justify-center gap-6 mb-2">
+            <a href="/impressum" className="hover:text-[#ff4d4d] transition-colors">
+              Impressum
+            </a>
+            <a href="/datenschutz" className="hover:text-[#ff4d4d] transition-colors">
+              Datenschutz
+            </a>
+          </div>
           © {year} Saray – Döner, Pizza & Pasta
         </div>
       </footer>
