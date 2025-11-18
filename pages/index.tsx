@@ -372,7 +372,6 @@ export default function Home() {
                   muted
                   playsInline
                   preload="none"
-                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
@@ -392,7 +391,6 @@ export default function Home() {
                   muted
                   playsInline
                   preload="none"
-                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
@@ -412,7 +410,6 @@ export default function Home() {
                   muted
                   playsInline
                   preload="none"
-                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
