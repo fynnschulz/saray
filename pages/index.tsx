@@ -12,7 +12,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url(/background.png)',
+            backgroundImage: 'url(/background.jpg)',
             opacity: '0.58'
           }}
         />
@@ -118,9 +118,10 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <img 
-                  src="/map.png" 
+                  src="/map.jpg" 
                   alt="Karte - Saray bei Kumar" 
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -181,9 +182,10 @@ export default function Home() {
                 <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
                   <div className="h-[340px] overflow-hidden">
                     <img 
-                      src="/kebab.png" 
+                      src="/kebab.jpg" 
                       alt="Kebab & Co" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -227,9 +229,10 @@ export default function Home() {
                 <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
                   <div className="h-[340px] overflow-hidden">
                     <img 
-                      src="/pizza.png" 
+                      src="/pizza.jpg" 
                       alt="Italienische Pizza" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -273,9 +276,10 @@ export default function Home() {
                 <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
                   <div className="h-[340px] overflow-hidden">
                     <img 
-                      src="/pasta.png" 
+                      src="/pasta.jpg" 
                       alt="Hausgemachte Pasta" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -321,9 +325,10 @@ export default function Home() {
                 <div className="flip-card-front group relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
                   <div className="h-[340px] overflow-hidden">
                     <img 
-                      src="/salad.png?v=2" 
+                      src="/salad.jpg" 
                       alt="Frische Salate" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -366,6 +371,8 @@ export default function Home() {
                   controls
                   muted
                   playsInline
+                  preload="none"
+                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
@@ -384,6 +391,8 @@ export default function Home() {
                   controls
                   muted
                   playsInline
+                  preload="none"
+                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
@@ -402,6 +411,8 @@ export default function Home() {
                   controls
                   muted
                   playsInline
+                  preload="none"
+                  loading="lazy"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback"
                   style={{ pointerEvents: 'auto' }}
@@ -427,6 +438,7 @@ export default function Home() {
                   src="/team.jpeg" 
                   alt="Unser Team - Saray bei Kumar" 
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="text-center p-4">
