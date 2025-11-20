@@ -80,16 +80,16 @@ export default function Home() {
             Speisekarte ansehen
           </a>
 
-          {/* Phone Number */}
+          {/* Online Bestellen Button */}
           <div className="mt-16 animate-fadein delay-450">
             <a 
               href="tel:+4968317613367"
-              className="inline-flex items-center gap-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white hover:text-[#ff4d4d] transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold text-lg sm:text-xl shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300 group border-2 border-white/20"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-transform">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
-              <span className="group-hover:tracking-wider transition-all">06831 7613367</span>
+              <span className="group-hover:tracking-wider transition-all">Online bestellen</span>
             </a>
           </div>
 
