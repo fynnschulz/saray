@@ -4,9 +4,24 @@ import Link from "next/link";
 export default function Home() {
   const year = new Date().getFullYear();
   const [flippedCards, setFlippedCards] = useState<{[key: string]: boolean}>({});
+  const [cookieAccepted, setCookieAccepted] = useState(false);
+  const [mapsAccepted, setMapsAccepted] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-[#18181b] to-[#23272f] relative overflow-x-hidden font-sans">
+      {/* DSGVO Cookie Banner */}
+      {!cookieAccepted && (
+        <div className="fixed bottom-0 left-0 w-full z-50 bg-white/95 border-t border-gray-300 shadow-lg p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <span className="text-black text-sm md:text-base">Diese Website verwendet technisch notwendige Cookies und bindet externe Dienste (z.B. Google Maps) nur nach Ihrer Zustimmung ein. Mehr Infos in der <Link href="/datenschutz" className="underline text-[#ff4d4d]">Datenschutzerklärung</Link>.</span>
+          <button
+            className="px-6 py-2 rounded-full bg-[#ff4d4d] text-white font-bold shadow hover:bg-[#ff6b6b] transition-all"
+            onClick={() => setCookieAccepted(true)}
+          >
+            Einverstanden
+          </button>
+        </div>
+      )}
+
       {/* Background Image with Aura Effect */}
       <div className="fixed inset-0 z-0">
         <div 
@@ -109,22 +124,34 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Map Image */}
+          {/* Map Image & Google Maps Opt-In */}
           <div className="mt-12 animate-fadein delay-750">
-            <div className="max-w-md mx-auto overflow-hidden rounded-2xl shadow-2xl border border-white/20 hover:scale-[1.02] transition-transform duration-300">
-              <a 
-                href="https://maps.google.com/?q=Sonnenstraße+11,+66740+Saarlouis"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img 
-                  src="/map.jpg" 
-                  alt="Karte - Saray bei Kumar" 
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </a>
-            </div>
+            {!mapsAccepted ? (
+              <div className="max-w-md mx-auto overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-white/90 p-8 text-center">
+                <p className="text-black mb-4">Um die Karte von Google Maps zu sehen, stimmen Sie bitte der Datenübertragung an Google zu. Mehr Infos in der <Link href="/datenschutz" className="underline text-[#ff4d4d]">Datenschutzerklärung</Link>.</p>
+                <button
+                  className="px-8 py-3 rounded-full bg-[#ff4d4d] text-white font-bold shadow hover:bg-[#ff6b6b] transition-all"
+                  onClick={() => setMapsAccepted(true)}
+                >
+                  Google Maps anzeigen
+                </button>
+              </div>
+            ) : (
+              <div className="max-w-md mx-auto overflow-hidden rounded-2xl shadow-2xl border border-white/20 hover:scale-[1.02] transition-transform duration-300">
+                <a 
+                  href="https://maps.google.com/?q=Sonnenstraße+11,+66740+Saarlouis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img 
+                    src="/map.jpg" 
+                    alt="Karte - Saray bei Kumar" 
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Opening Hours */}
